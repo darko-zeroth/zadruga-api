@@ -50,5 +50,10 @@ class Agency extends BaseModel
 	public function jobs(): HasMany {
 		return  $this->hasMany(Jobs::class);
 	}
+
+	public function jobWorkerRecords(): HasMany
+	{
+		return $this->hasMany(JobWorkerRecord::class);
+	}
 }
 

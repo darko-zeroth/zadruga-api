@@ -21,4 +21,9 @@ class Worker extends BaseModel
 	{
 		return $this->hasMany(WorkerMembership::class);
 	}
+
+	public function jobWorkerRecords(): HasMany
+	{
+		return $this->hasMany(JobWorkerRecord::class);
+	}
 }

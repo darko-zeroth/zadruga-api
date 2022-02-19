@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Jobs extends BaseModel
 {
@@ -19,5 +20,10 @@ class Jobs extends BaseModel
 	public function client(): BelongsTo
 	{
 		return $this->belongsTo(Client::class);
+	}
+
+	public function jobWorkerRecords(): HasMany
+	{
+		return $this->hasMany(JobWorkerRecord::class);
 	}
 }
