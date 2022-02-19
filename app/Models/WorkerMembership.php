@@ -3,16 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class WorkerMembership extends BaseModel
 {
-	protected $hidden = [
-		'password'
-	];
-
 	public function agency(): BelongsTo
 	{
 		return $this->belongsTo(Agency::class);
+	}
+
+	public function worker(): BelongsTo
+	{
+		return $this->belongsTo(Worker::class);
 	}
 }

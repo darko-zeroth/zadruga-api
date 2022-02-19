@@ -9,12 +9,12 @@ class WorkerCategory extends BaseModel
 {
 	public function profile(): BelongsTo
 	{
-		return $this->belongsTo('App\Profile');
+		return $this->belongsTo(Profile::class);
 	}
 
 	public function workerData(): HasMany
 	{
-		return $this->hasMany('App\WorkerData');
+		return $this->hasMany(WorkerData::class);
 	}
 }
 

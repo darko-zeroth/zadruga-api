@@ -9,26 +9,26 @@ class Profile extends BaseModel
 {
 	public function country(): BelongsTo
 	{
-		return $this->belongsTo('App\Country');
+		return $this->belongsTo(Country::class);
 	}
 
 	public function agencies(): HasMany
 	{
-		return $this->hasMany('App\Agency');
+		return $this->hasMany(Agency::class);
 	}
 
 	public function workerCategories(): HasMany
 	{
-		return $this->hasMany('App\WorkerCategory');
+		return $this->hasMany(WorkerCategory::class);
 	}
 
 	public function clientTypes(): HasMany
 	{
-		return $this->hasMany('App\ClientType');
+		return $this->hasMany(ClientType::class);
 	}
 
 	public function jobStatuses(): HasMany
 	{
-		return $this->hasMany('App\JobStatus');
+		return $this->hasMany(JobStatus::class);
 	}
 }

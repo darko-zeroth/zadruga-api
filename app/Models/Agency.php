@@ -9,46 +9,46 @@ class Agency extends BaseModel
 {
 	public function language(): BelongsTo
 	{
-		return $this->belongsTo('App\Language');
+		return $this->belongsTo(Language::class);
 	}
 
 	public function profile(): BelongsTo
 	{
-		return $this->belongsTo('App\Profile');
+		return $this->belongsTo(Profile::class);
 	}
 
 	public function users(): HasMany
 	{
-		return $this->hasMany('App\User');
+		return $this->hasMany(User::class);
 	}
 
 	public function workers(): HasMany
 	{
-		return $this->hasMany('App\Worker');
+		return $this->hasMany(Worker::class);
 	}
 
 	public function workerData(): HasMany
 	{
-		return $this->hasMany('App\WorkerData');
+		return $this->hasMany(WorkerData::class);
 	}
 
 	public function workerMemberships(): HasMany
 	{
-		return $this->hasMany('App\WorkerMembership');
+		return $this->hasMany(WorkerMembership::class);
 	}
 
 	public function clients(): HasMany
 	{
-		return $this->hasMany('App\Client');
+		return $this->hasMany(Client::class);
 	}
 
 	public function clientData(): HasMany
 	{
-		return $this->hasMany('App\ClientData');
+		return $this->hasMany(ClientData::class);
 	}
 
 	public function jobs(): HasMany {
-		return  $this->hasMany('App\Jobs');
+		return  $this->hasMany(Jobs::class);
 	}
 }
 

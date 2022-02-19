@@ -9,11 +9,11 @@ class JobStatus extends BaseModel
 {
 	public function profile(): BelongsTo
 	{
-		return $this->belongsTo('App\Profile');
+		return $this->belongsTo(Profile::class);
 	}
 
 	public function jobs(): HasMany
 	{
-		return $this->hasMany('App\Jobs');
+		return $this->hasMany(Jobs::class);
 	}
 }

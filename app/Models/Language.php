@@ -8,6 +8,6 @@ class Language extends BaseModel
 {
 	public function agencies(): HasMany
 	{
-		return $this->hasMany('App\Agency');
+		return $this->hasMany(Agency::class);
 	}
 }
