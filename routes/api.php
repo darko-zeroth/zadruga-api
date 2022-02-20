@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth.basic.once')->group(function () {
+Route::middleware(['api'])->group(function () {
 	Route::get('info', [UserController::class, 'info']);
 });
