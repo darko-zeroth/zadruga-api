@@ -108,4 +108,5 @@ return [
 
     'password_timeout' => 10800,
 
+	'login_fail_limit' => 3
 ];
