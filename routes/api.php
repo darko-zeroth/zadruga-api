@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['api'])->group(function () {
 	Route::get('info', [UserController::class, 'info']);
+	Route::get('user', [UserController::class, 'show']);
 });
