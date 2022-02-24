@@ -21,8 +21,10 @@ class CamelCaseResponse
 		$content = $response->getContent();
 		$json = json_decode($content, true);
 
-		$replaced = Helpers::replaceKeys($json, 'camel');
-		$response->setContent(json_encode($replaced));
+		if(is_array($json)) {
+			$replaced = Helpers::replaceKeys($json, 'camel');
+			$response->setContent(json_encode($replaced));
+		}
 
 		return $response;
     }
