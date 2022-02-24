@@ -8,7 +8,7 @@ class Helpers
 {
 	public static function replaceKeys(array $input, $type): array
 	{
-		$return = array();
+		$return = [];
 
 		foreach ($input as $key => $value) {
 			if ($type === 'camel') {
