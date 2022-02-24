@@ -12,23 +12,23 @@ class BaseModel extends Model
 	protected $guarded = [
 		'id',
 		'asuid',
-		'countryId',
-		'marketId',
-		'profileId',
-		'agencyId',
-		'createdAt',
-		'updatedAt',
+		'country_id',
+		'market_id',
+		'profile_id',
+		'agency_id',
+		'created_at',
+		'updated_at',
 		'status',
 		'password'
 	];
 
 	protected $hidden = [
-		'countryId',
-		'marketId',
-		'profileId',
-		'agencyId',
-		'createdAt',
-		'updatedAt',
+		'country_id',
+		'market_id',
+		'profile_id',
+		'agency_id',
+		'created_at',
+		'updated_at',
 		'password'
 	];
 
