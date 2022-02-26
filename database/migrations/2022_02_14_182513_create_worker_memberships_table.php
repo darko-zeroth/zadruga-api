@@ -17,9 +17,11 @@ return new class extends Migration
             $table->id();
 			$table->foreignId('worker_id')->constrained();
 			$table->string('asuid');
-			$table->date('signing_date');
+			$table->timestamp('valid_from');
 			$table->foreignId('agency_id')->constrained();
             $table->timestamps();
+
+			$table->unique(['worker_id', 'valid_from']);
         });
     }
 

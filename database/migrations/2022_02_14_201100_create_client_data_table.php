@@ -30,9 +30,11 @@ return new class extends Migration
 			$table->string('bank_account_number')->unique()->nullable();
 			$table->string('business_activity')->nullable();
 			$table->text('note')->nullable();
-			$table->date('valid_from');
+			$table->timestamp('valid_from');
 			$table->foreignId('agency_id')->constrained();
             $table->timestamps();
+
+			$table->unique(['client_id', 'valid_from']);
         });
     }
 

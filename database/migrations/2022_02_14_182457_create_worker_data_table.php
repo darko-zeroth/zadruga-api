@@ -39,9 +39,11 @@ return new class extends Migration
 			$table->text('skills')->nullable();
 			$table->text('note')->nullable();
 			$table->foreignId('worker_category_id')->constrained();
-			$table->date('valid_from');
+			$table->timestamp('valid_from');
 			$table->foreignId('agency_id')->constrained();
             $table->timestamps();
+
+			$table->unique(['worker_id', 'valid_from']);
         });
     }
 
