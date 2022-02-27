@@ -43,7 +43,9 @@ class WorkerDataTableSeeder extends Seeder
 			'agency_id' => 1,
 			'worker_category_id' => 1,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
 		DB::table('worker_data')->insert([
 			'worker_id' => 2,
@@ -72,7 +74,9 @@ class WorkerDataTableSeeder extends Seeder
 			'agency_id' => 1,
 			'worker_category_id' => 2,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
 		DB::table('worker_data')->insert([
 			'worker_id' => 1,
@@ -102,7 +106,9 @@ class WorkerDataTableSeeder extends Seeder
 			'agency_id' => 1,
 			'worker_category_id' => 1,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
     }
 }

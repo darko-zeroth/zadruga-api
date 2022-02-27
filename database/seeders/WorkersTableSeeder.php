@@ -18,12 +18,16 @@ class WorkersTableSeeder extends Seeder
 		DB::table('workers')->insert([
 			'agency_id' => 1,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
 		DB::table('workers')->insert([
 			'agency_id' => 1,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
 	}
 }

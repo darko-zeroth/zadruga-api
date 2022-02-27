@@ -26,9 +26,12 @@ return new class extends Migration
 			$table->text('note')->nullable();
 			$table->foreignId('job_status_id')->constrained();
 			$table->foreignId('agency_id')->constrained();
-			$table->string('created_by');
-			$table->string('updated_by');
+			$table->unsignedBigInteger('created_by');
+			$table->unsignedBigInteger('updated_by');
             $table->timestamps();
+
+			$table->foreign('created_by')->references('id')->on('users');
+			$table->foreign('updated_by')->references('id')->on('users');
         });
     }
 

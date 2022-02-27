@@ -34,7 +34,9 @@ class ClientDataTableSeeder extends Seeder
 			'valid_from' => Carbon::now(),
 			'agency_id' => 1,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
 	}
 }

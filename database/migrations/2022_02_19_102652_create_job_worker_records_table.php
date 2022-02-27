@@ -20,11 +20,14 @@ return new class extends Migration
 			$table->decimal('hours_worked', 19, 4)->unsigned()->nullable();
 			$table->decimal('hourly_rate', 19, 4)->unsigned()->nullable();
 			$table->foreignId('agency_id')->constrained();
-			$table->string('created_by');
-			$table->string('updated_by');
+			$table->unsignedBigInteger('created_by');
+			$table->unsignedBigInteger('updated_by');
 			$table->timestamps();
 
 			$table->unique(['agency_id', 'job_id', 'worker_id'], 'worker_unique');
+
+			$table->foreign('created_by')->references('id')->on('users');
+			$table->foreign('updated_by')->references('id')->on('users');
         });
     }
 

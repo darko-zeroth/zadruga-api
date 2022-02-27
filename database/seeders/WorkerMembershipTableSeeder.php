@@ -21,7 +21,9 @@ class WorkerMembershipTableSeeder extends Seeder
 			'valid_from' => "2020-01-11",
 			'agency_id' => 1,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
 		DB::table('worker_memberships')->insert([
 			'worker_id' => 2,
@@ -29,7 +31,9 @@ class WorkerMembershipTableSeeder extends Seeder
 			'valid_from' => Carbon::now(),
 			'agency_id' => 1,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
 		DB::table('worker_memberships')->insert([
 			'worker_id' => 1,
@@ -37,7 +41,9 @@ class WorkerMembershipTableSeeder extends Seeder
 			'valid_from' => Carbon::now(),
 			'agency_id' => 1,
 			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now()
+			'updated_at' => Carbon::now(),
+			'created_by' => 1,
+			'updated_by' => 1
 		]);
     }
 }
