@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WorkerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['api'])->group(function () {
-	Route::get('info', [UserController::class, 'info']);
-	Route::get('user', [UserController::class, 'show']);
+Route::get('info', [UserController::class, 'info']);
+Route::get('user', [UserController::class, 'show']);
 
-	Route::apiResource('language', LanguageController::class)->only(['index', 'show']);
-});
+Route::apiResource('language', LanguageController::class)->only(['index', 'show']);
+Route::apiResource('worker', WorkerController::class)->only(['index', 'show']);
+Route::apiResource('worker', WorkerController::class)->except(['destroy']);
