@@ -8,7 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
 	protected $hidden = [
-		'password'
+		'password',
+		'status',
+		'login_fails',
+		'agency_id',
+		'created_at',
+		'updated_at'
 	];
 
 	public function agency(): BelongsTo
