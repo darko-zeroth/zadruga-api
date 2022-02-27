@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
 			$table->foreignId('agency_id')->constrained();
+			$table->string('created_by');
+			$table->string('updated_by');
             $table->timestamps();
         });
     }

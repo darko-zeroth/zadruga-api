@@ -32,6 +32,8 @@ return new class extends Migration
 			$table->text('note')->nullable();
 			$table->timestamp('valid_from');
 			$table->foreignId('agency_id')->constrained();
+			$table->string('created_by');
+			$table->string('updated_by');
             $table->timestamps();
 
 			$table->unique(['client_id', 'valid_from']);

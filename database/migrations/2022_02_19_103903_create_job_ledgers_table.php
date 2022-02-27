@@ -20,6 +20,8 @@ return new class extends Migration
 			$table->date('date');
 			$table->string('source');
 			$table->bigInteger('agency_id')->unsigned();
+			$table->string('created_by');
+			$table->string('updated_by');
             $table->timestamps();
         });
     }
