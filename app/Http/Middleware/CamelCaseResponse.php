@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\Helpers\Helpers;
+use App\Aux\MultiTool;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -22,7 +22,7 @@ class CamelCaseResponse
 		$json = json_decode($content, true);
 
 		if(is_array($json)) {
-			$replaced = Helpers::replaceKeys($json, 'camel');
+			$replaced = MultiTool::replaceKeys($json, 'camel');
 			$response->setContent(json_encode($replaced));
 		}
 

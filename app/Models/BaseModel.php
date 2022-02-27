@@ -2,14 +2,21 @@
 
 namespace App\Models;
 
-use App\Traits\AgencyScopeTrait;
+use App\Aux\AgencyInsertObserver;
+use App\Aux\AgencyScope;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class BaseModel extends Model
 {
 	use HasFactory;
-	use AgencyScopeTrait;
+
+	protected static function boot()
+	{
+		parent::boot();
+		static::addGlobalScope(new AgencyScope());
+		static::observe(new AgencyInsertObserver());
+	}
 
 	protected $guarded = [
 		'id',

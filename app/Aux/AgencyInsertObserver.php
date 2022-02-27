@@ -1,5 +1,5 @@
 <?php
-namespace App\Observers;
+namespace App\Aux;
 
 use Illuminate\Support\Facades\Auth;
 

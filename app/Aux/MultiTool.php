@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Helpers;
+namespace App\Aux;
 
 use Str;
 
-class Helpers
+class MultiTool
 {
 	public static function replaceKeys(array $input, $type): array
 	{
